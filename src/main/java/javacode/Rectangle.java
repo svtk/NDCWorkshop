@@ -7,6 +7,11 @@ public class Rectangle {
     public Rectangle(int width, int height) {
         this.width = width;
         this.height = height;
+        System.out.println("in constructor");
+    }
+
+    public Rectangle(int size) {
+        this(size, size);
     }
 
     public int getWidth() {
