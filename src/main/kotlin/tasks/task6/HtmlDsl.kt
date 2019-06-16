@@ -19,11 +19,19 @@ fun table(init: TABLE.() -> Unit): TABLE {
 }
 
 class TABLE : Tag("table") {
-    fun tr(init: TR.() -> Unit) { /* TODO */ }
+    fun tr(init: TR.() -> Unit) {
+        val tr = TR()
+        tr.init()
+        children.add(tr)
+    }
 }
 
 class TR : Tag("tr") {
-    fun td(init: TD.() -> Unit) { /* TODO */ }
+    fun td(init: TD.() -> Unit) {
+        val td = TD()
+        td.init()
+        children.add(td)
+    }
 }
 
 class TD : Tag("td")
